@@ -1,5 +1,5 @@
 <?php
 
-use DVC\JobSelectWidget\Widget\Frontend\JobSelectWidget;
+use DVC\JobsSelectWidget\Widget\Frontend\JobsSelectWidget;
 
-$GLOBALS['TL_FFL'][JobSelectWidget::NAME] = JobSelectWidget::class;
+$GLOBALS['TL_FFL'][JobsSelectWidget::NAME] = JobsSelectWidget::class;

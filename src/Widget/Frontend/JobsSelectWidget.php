@@ -1,13 +1,13 @@
 <?php
 
-namespace DVC\JobSelectWidget\Widget\Frontend;
+namespace DVC\JobsSelectWidget\Widget\Frontend;
 
 use Contao\FormSelectMenu;
 use Plenta\ContaoJobsBasic\Contao\Model\PlentaJobsBasicOfferModel as OfferModel;
 
-class JobSelectWidget extends FormSelectMenu
+class JobsSelectWidget extends FormSelectMenu
 {
-    const NAME = 'job_select';
+    const NAME = 'jobs_select';
 
     protected $blnSubmitInput = true;
     protected $blnForAttribute = true;

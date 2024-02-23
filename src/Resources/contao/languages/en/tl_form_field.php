@@ -1,8 +1,8 @@
 <?php
 
-use DVC\JobSelectWidget\Widget\Frontend\JobSelectWidget;
+use DVC\JobsSelectWidget\Widget\Frontend\JobsSelectWidget;
 
-$GLOBALS['TL_LANG']['FFL'][JobSelectWidget::NAME] = [
+$GLOBALS['TL_LANG']['FFL'][JobsSelectWidget::NAME] = [
     'Select menu with job offers',
     'Displays all available job offers'
 ];

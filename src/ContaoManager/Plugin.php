@@ -1,12 +1,12 @@
 <?php
 
-namespace DVC\JobSelectWidget\ContaoManager;
+namespace DVC\JobsSelectWidget\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use DVC\JobSelectWidget\JobSelectWidgetBundle;
+use DVC\JobsSelectWidget\JobsSelectWidgetBundle;
 use Plenta\ContaoJobsBasic\PlentaContaoJobsBasicBundle;
 
 class Plugin implements BundlePluginInterface
@@ -14,7 +14,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create(JobSelectWidgetBundle::class)
+            BundleConfig::create(JobsSelectWidgetBundle::class)
                 ->setLoadAfter([
                     ContaoCoreBundle::class,
                     PlentaContaoJobsBasicBundle::class,
