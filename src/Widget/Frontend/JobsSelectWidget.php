@@ -23,6 +23,10 @@ class JobsSelectWidget extends FormSelectMenu
     {
         $publishedOffers = OfferModel::findAllPublishedByTypesAndLocation([], []);
 
+        if ($publishedOffers === null) {
+            return [];
+        }
+
         return \array_map(fn($offer) => [
             'type' => 'option',
             'label' => html_entity_decode($offer->title),
