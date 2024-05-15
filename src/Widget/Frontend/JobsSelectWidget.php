@@ -3,6 +3,7 @@
 namespace DVC\JobsSelectWidget\Widget\Frontend;
 
 use Contao\FormSelectMenu;
+use Contao\StringUtil;
 use Plenta\ContaoJobsBasic\Contao\Model\PlentaJobsBasicOfferModel as OfferModel;
 
 class JobsSelectWidget extends FormSelectMenu
@@ -29,8 +30,15 @@ class JobsSelectWidget extends FormSelectMenu
 
         return \array_map(fn($offer) => [
             'type' => 'option',
-            'label' => html_entity_decode($offer->title),
-            'value' => html_entity_decode($offer->title),
+            'label' => self::removeBasicEntities($offer->title),
+            'value' => self::removeBasicEntities($offer->title),
         ], $publishedOffers->getModels());
     }
+
+    private static function removeBasicEntities(string $source): string
+	{
+		$source = StringUtil::restoreBasicEntities($source);
+		
+		return str_replace(array('&amp;', '&lt;', '&gt;', '&nbsp;', '&shy;', '&ZeroWidthSpace;'), array('&', '<', '>', ' ', '', ''), $source);
+	}
 }
