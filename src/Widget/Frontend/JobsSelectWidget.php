@@ -2,11 +2,11 @@
 
 namespace DVC\JobsSelectWidget\Widget\Frontend;
 
-use Contao\FormSelectMenu;
+use Contao\FormSelect;
 use Contao\StringUtil;
 use Plenta\ContaoJobsBasic\Contao\Model\PlentaJobsBasicOfferModel as OfferModel;
 
-class JobsSelectWidget extends FormSelectMenu
+class JobsSelectWidget extends FormSelect
 {
     const NAME = 'jobs_select';
 
