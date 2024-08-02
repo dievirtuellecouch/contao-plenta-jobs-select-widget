@@ -2,7 +2,7 @@
     "name": "dvc/contao-plenta-jobs-select-widget",
     "description": "Creates a select Fields with all Jobs for Plenta Jobs Basic.",
     "type": "contao-bundle",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "require": {
         "php": "^8.1",
         "contao/core-bundle": "^4.13",
