@@ -38,8 +38,7 @@ class JobsSelectWidget extends FormSelect
     private static function removeBasicEntities(string $source): string
 	{
 		$source = StringUtil::restoreBasicEntities($source);
-		$source = StringUtil::decodeEntities($source);
-
+		
 		return str_replace(array('&amp;', '&lt;', '&gt;', '&nbsp;', '&shy;', '&ZeroWidthSpace;'), array('&', '<', '>', ' ', '', ''), $source);
 	}
 }
