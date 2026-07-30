@@ -1,26 +1,29 @@
 {
     "name": "dvc/contao-plenta-jobs-select-widget",
-    "description": "Contao form widget for selecting job offers from Plenta Jobs bundle",
-    "version": "0.9.1",
+    "description": "Creates a select Fields with all Jobs for Plenta Jobs Basic.",
     "type": "contao-bundle",
-    "license": "MIT",
+    "version": "5.7.1",
+    "require": {
+        "php": "^8.3",
+        "contao/core-bundle": "^5.7",
+        "plenta/contao-jobs-basic-bundle": "3.*"
+    },
+    "conflict": {
+        "plenta/contao-jobs-basic-bundle": "<3.0"
+    },
+    "license": "LGPL-3.0-or-later",
     "authors": [
         {
-            "name": "DVC",
-            "email": "info@dvc.de"
+            "name": "Jonathan Hermann",
+            "email": "jh@d-v-c.net"
         }
     ],
-    "require": {
-        "php": "^8.1",
-        "contao/core-bundle": "^5.0",
-        "plenta/contao-jobs-basic-bundle": "^3.0"
-    },
     "autoload": {
         "psr-4": {
-            "Dvc\\ContaoPlentaJobsSelectWidgetBundle\\": "src/"
+            "DVC\\JobsSelectWidget\\": "src/"
         }
     },
     "extra": {
-        "contao-manager-plugin": "Dvc\\ContaoPlentaJobsSelectWidgetBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "DVC\\JobsSelectWidget\\ContaoManager\\Plugin"
     }
 }
