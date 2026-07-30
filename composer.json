@@ -1,0 +1,29 @@
+{
+    "name": "dvc/contao-plenta-jobs-select-widget",
+    "description": "Creates a select Fields with all Jobs for Plenta Jobs Basic.",
+    "type": "contao-bundle",
+    "version": "5.7.0",
+    "require": {
+        "php": "^8.3",
+        "contao/core-bundle": "^5.7",
+        "plenta/contao-jobs-basic-bundle": "3.*"
+    },
+    "conflict": {
+        "plenta/contao-jobs-basic-bundle": "<3.0"
+    },
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Jonathan Hermann",
+            "email": "jh@d-v-c.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DVC\\JobsSelectWidget\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "DVC\\JobsSelectWidget\\ContaoManager\\Plugin"
+    }
+}
