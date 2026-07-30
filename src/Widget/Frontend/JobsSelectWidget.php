@@ -10,6 +10,7 @@ class JobsSelectWidget extends FormSelect
 {
     public const NAME = 'jobs_select';
 
+    protected $strTemplate = 'form_job_select';
     protected $blnSubmitInput = true;
     protected $blnForAttribute = true;
 
